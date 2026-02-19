@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
+const jwt = require('jsonwebtoken');
 const authRoutes = require('./routes/auth.cjs');
 const moduleRoutes = require('./routes/modules.cjs');
 const examRoutes = require('./routes/exams.cjs');
@@ -28,7 +29,7 @@ app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
-app.get('*', (req, res) => {
+app.get('(.*)', (req, res) => {
     res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
