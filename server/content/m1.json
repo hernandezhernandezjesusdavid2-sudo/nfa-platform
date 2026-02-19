@@ -4,15 +4,27 @@
     "content": [
         {
             "type": "text",
-            "value": "Un autómata es un modelo matemático de un sistema con entradas y salidas, que puede estar en uno de un número finito de estados."
+            "value": "La Teoría de Autómatas es una rama de las ciencias de la computación que estudia máquinas abstractas y los problemas que estas pueden resolver. Un autómata es, esencialmente, un modelo matemático de un sistema que recibe una entrada, cambia de estado según ciertas reglas y produce una salida."
         },
         {
             "type": "text",
-            "value": "La teoría de autómatas estudia estos modelos y su capacidad para reconocer lenguajes. Es la base de los compiladores y procesadores de texto."
+            "value": "El concepto moderno de autómata fue impulsado por figuras como Alan Turing y Stephen Kleene. Hoy en día, los autómatas son fundamentales para el diseño de compiladores, el procesamiento de lenguaje natural, la verificación de hardware y el análisis de protocolos de red."
         },
         {
             "type": "important",
-            "value": "Concepto Clave: Un autómata procesa una cadena de entrada y decide si 'acepta' o 'rechaza' dicha cadena."
+            "value": "¿Por qué estudiar Autómatas? Porque nos permiten entender los límites de la computación: qué se puede computar y con qué recursos."
+        },
+        {
+            "type": "text",
+            "value": "Un autómata finito es el modelo más simple. Tiene una memoria extremadamente limitada: solo sabe en qué 'estado' se encuentra actualmente, pero no puede recordar cuántas letras ha leído ni 'escribir' en una cinta."
+        },
+        {
+            "type": "important",
+            "value": "Actividad Sugerida #1: Identifica procesos en la vida real que funcionen como autómatas finitos (ejemplo: un semáforo, una máquina expendedora o una puerta automática)."
+        },
+        {
+            "type": "text",
+            "value": "A lo largo de este curso, nos enfocaremos en los Autómatas Finitos No Deterministas (AFND), que añaden una capa de 'elección' o 'paralelismo' conceptual muy poderosa sobre los modelos deterministas básicos."
         }
     ]
 }

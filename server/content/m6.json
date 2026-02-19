@@ -4,15 +4,28 @@
     "content": [
         {
             "type": "text",
-            "value": "Todo AFND tiene un AFD equivalente que reconoce el mismo lenguaje. El proceso para encontrarlo se llama 'Construcción por Subconjuntos' (Subset Construction)."
+            "value": "Este es el algoritmo estrella de la teoría: 'Subset Construction'. Nos permite transformar cualquier AFND complejo en un AFD equivalente (el cual es mucho más fácil de programar en hardware real)."
         },
         {
             "type": "text",
-            "value": "Los estados del nuevo AFD corresponden a subconjuntos del conjunto de estados del AFND original (el conjunto potencia)."
+            "value": "El algoritmo sigue una lógica de 'Estados como Conjuntos':"
+        },
+        {
+            "type": "list",
+            "items": [
+                "Cada estado en el nuevo AFD representará un CONJUNTO de estados del AFND original.",
+                "El estado inicial del AFD es el conjunto {q0} (más su clausura épsilon).",
+                "Para cada nuevo conjunto y cada símbolo, calculamos a qué conjunto de estados se llega. Si ese conjunto es nuevo, lo añadimos a nuestra tabla.",
+                "Un estado del AFD es final si el conjunto que representa contiene al menos un estado final del AFND original."
+            ]
         },
         {
             "type": "important",
-            "value": "Efecto: Si el AFND tiene 'n' estados, el AFD podría tener hasta 2^n estados."
+            "value": "Explosión de Estados: Un AFND de N estados puede generar un AFD de hasta 2^N estados. Por eso el no determinismo es una forma tan comprimida de representar lógica."
+        },
+        {
+            "type": "important",
+            "value": "Actividad Sugerida #6: Utiliza nuestra herramienta 'Conversor' para realizar la tabla de transición de un AFND simple. Intenta predecir cuántos estados tendrá el AFD antes de terminar el proceso."
         }
     ]
 }

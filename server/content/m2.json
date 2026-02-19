@@ -4,21 +4,29 @@
     "content": [
         {
             "type": "text",
-            "value": "Un Autómata Finito No Determinista (AFND) se define formalmente como una 5-tupla (Q, Σ, δ, q0, F)."
+            "value": "Para que el comportamiento de un autómata sea preciso y no ambiguo, los matemáticos definieron una estructura formal llamada la 5-tupla. Un AFND se define como A = (Q, Σ, δ, q0, F)."
         },
         {
             "type": "list",
             "items": [
-                "Q: Un conjunto finito de estados.",
-                "Σ: Un alfabeto finito de símbolos de entrada.",
-                "δ: La función de transición, δ: Q × Σ → P(Q).",
-                "q0: El estado inicial, q0 ∈ Q.",
-                "F: Un conjunto de estados finales o de aceptación, F ⊆ Q."
+                "Q: Un conjunto finito y no vacío de estados. Estos son los 'nudos' del diagrama.",
+                "Σ: El alfabeto. Un conjunto finito de símbolos (letras, dígitos) que el autómata puede reconocer.",
+                "δ (Delta): La función de transición. En un AFND, δ: Q × Σ → P(Q). Esto significa que dado un estado y un símbolo, el resultado es UN CONJUNTO de estados posibles.",
+                "q0: El estado inicial. Es un elemento de Q donde comienza todo el proceso.",
+                "F: El conjunto de estados de aceptación o finales. Es un subconjunto de Q (F ⊆ Q)."
             ]
         },
         {
+            "type": "text",
+            "value": "La gran diferencia del AFND está en la función δ. Mientras que en un AFD δ(q, a) = p (un solo estado), en un AFND δ(q, a) puede ser {p1, p2, p3}, lo que indica que el autómata se 'clona' para explorar todos esos caminos al mismo tiempo."
+        },
+        {
             "type": "important",
-            "value": "Nota: En un AFND, la función de transición devuelve un conjunto de estados, no un solo estado."
+            "value": "Dato Académico: El término P(Q) se refiere al 'Conjunto Potencia' de Q, es decir, todas las posibles combinaciones de estados."
+        },
+        {
+            "type": "important",
+            "value": "Actividad Sugerida #2: Dibuja un diagrama de estados pequeño y escribe formalmente los elementos de su 5-tupla. No olvides indicar claramente cuál es q0 y cuáles son F."
         }
     ]
 }

@@ -4,15 +4,31 @@
     "content": [
         {
             "type": "text",
-            "value": "El 'no determinismo' significa que para un estado y un símbolo de entrada dado, el autómata puede transitar a varios estados simultáneamente, o incluso realizar una transición sin leer ningún símbolo (transición-ε)."
+            "value": "En el mundo determinista (AFD), el futuro es predecible: un estado y un símbolo llevan a exactamanete UN estado siguiente. El No Determinismo (AFND) rompe esta regla."
         },
         {
             "type": "text",
-            "value": "Esto permite que el autómata esté en 'varios estados a la vez' conceptualmente."
+            "value": "Un AFND puede tener:"
+        },
+        {
+            "type": "list",
+            "items": [
+                "Transiciones Múltiples: Para un mismo símbolo 'a', el autómata puede ir a q1 y q2.",
+                "Transiciones Vacías (ε): El autómata puede saltar de un estado a otro SIN leer ningún símbolo de la entrada.",
+                "Cero Transiciones: Si no hay una regla para un símbolo en un estado, esa rama de la computación simplemente muere."
+            ]
+        },
+        {
+            "type": "text",
+            "value": "Conceptualmente, podemos pensar que el autómata tiene una 'capacidad de adivinar perfecta'. Si existe AL MENOS UN camino que lleve a un estado de aceptación, el AFND aceptará la cadena."
         },
         {
             "type": "important",
-            "value": "Diferencia Clave: En un AFD hay exactamente una transición por símbolo. En un AFND puede haber cero, una o más."
+            "value": "Punto de Reflexión: ¿El no determinismo hace que los autómatas puedan reconocer más lenguajes que los deterministas? La respuesta es NO. Ambos tienen el mismo poder computacional, pero el AFND suele ser mucho más pequeño y fácil de diseñar."
+        },
+        {
+            "type": "important",
+            "value": "Actividad Sugerida #4: Investiga qué es una 'NFA con transiciones ε' y cómo se diferencia de una NFA estándar. Dibuja un ejemplo simple."
         }
     ]
 }

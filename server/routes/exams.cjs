@@ -3,6 +3,26 @@ const { getDb } = require('../db/db.cjs');
 
 const router = express.Router();
 
+// Get exam by type
+router.get('/type/:type', async (req, res) => {
+    try {
+        const { type } = req.params;
+        const db = await getDb();
+        const exam = await db.get('SELECT * FROM exams WHERE type = ?', [type]);
+        if (!exam) return res.status(404).json({ error: 'Examen no encontrado' });
+
+        const questions = await db.all('SELECT id, text, options_json FROM questions WHERE exam_id = ?', [exam.id]);
+        const formattedQuestions = questions.map(q => ({
+            ...q,
+            options: JSON.parse(q.options_json)
+        }));
+
+        res.json({ ...exam, questions: formattedQuestions });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
 // Get exam by ID with questions
 router.get('/:id', async (req, res) => {
     try {

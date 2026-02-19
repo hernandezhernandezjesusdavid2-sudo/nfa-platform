@@ -4,15 +4,27 @@
     "content": [
         {
             "type": "text",
-            "value": "El alfabeto (Σ) es el conjunto de símbolos que el autómata puede leer. Un lenguaje sobre un alfabeto es un conjunto de cadenas formadas por símbolos de Σ."
+            "value": "Un símbolo es una entidad atómica (como 'a', '1', o '0'). Un alfabeto (Σ) es un conjunto de estos símbolos. Una 'cadena' (o palabra) es una secuencia finita de símbolos elegidos de un alfabeto."
         },
         {
             "type": "text",
-            "value": "Un autómata 'reconoce' un lenguaje si acepta exactamente todas las cadenas que pertenecen a ese lenguaje."
+            "value": "La longitud de una cadena 'w', denotada como |w|, es el número de símbolos que contiene. Existe una cadena especial llamada 'cadena vacía', denotada por ε (épsilon), que tiene longitud 0."
         },
         {
-            "type": "example",
-            "value": "Si Σ = {a, b}, un lenguaje podría ser 'todas las cadenas que terminan en a'."
+            "type": "text",
+            "value": "El conjunto de todas las cadenas posibles sobre un alfabeto Σ se denota como Σ* (Clausura de Kleene). Por ejemplo, si Σ = {0, 1}, entonces Σ* = {ε, 0, 1, 00, 01, 10, 11, ...}."
+        },
+        {
+            "type": "important",
+            "value": "Un Lenguaje es simplemente un subconjunto de Σ*. Si un autómata acepta un conjunto de cadenas, decimos que ese es el lenguaje que define el autómata."
+        },
+        {
+            "type": "text",
+            "value": "Los lenguajes que pueden ser reconocidos por autómatas finitos se llaman 'Lenguajes Regulares'."
+        },
+        {
+            "type": "important",
+            "value": "Actividad Sugerida #3: Escribe 10 cadenas que pertenezcan al lenguaje Σ* donde Σ = {a, b, c} y que tengan longitud exactamente 2."
         }
     ]
 }

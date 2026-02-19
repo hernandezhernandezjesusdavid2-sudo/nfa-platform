@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Exam = ({ examId, userId, onComplete }) => {
+const Exam = ({ examId, examType, userId, onComplete }) => {
     const [exam, setExam] = useState(null);
     const [answers, setAnswers] = useState({});
     const [result, setResult] = useState(null);
@@ -8,11 +8,12 @@ const Exam = ({ examId, userId, onComplete }) => {
 
     useEffect(() => {
         fetchExam();
-    }, [examId]);
+    }, [examId, examType]);
 
     const fetchExam = async () => {
         try {
-            const res = await fetch(`http://localhost:5000/api/exams/${examId}`);
+            const endpoint = examType ? `/api/exams/type/${examType}` : `/api/exams/${examId}`;
+            const res = await fetch(`http://localhost:5000${endpoint}`);
             const data = await res.json();
             setExam(data);
             setLoading(false);

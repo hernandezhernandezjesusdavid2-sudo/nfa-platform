@@ -4,15 +4,28 @@
     "content": [
         {
             "type": "text",
-            "value": "Para simular un AFND, mantenemos el conjunto de todos los estados en los que el autómata podría estar."
+            "value": "Dado que un AFND puede estar en múltiples estados a la vez, simularlo requiere rastrear el CONJUNTO de estados activos. Este es el principio de funcionamiento de nuestro simulador interactivo."
         },
         {
             "type": "text",
-            "value": "Al leer un símbolo, calculamos el nuevo conjunto de estados aplicando la función δ a cada estado actual y uniendo los resultados."
+            "value": "Proceso de Simulación paso a paso:"
         },
         {
-            "type": "text",
-            "value": "Una cadena es aceptada si al final del proceso, al menos uno de los estados activos es un estado de aceptación (F)."
+            "type": "list",
+            "items": [
+                "Paso 1: Empeamos en el estado inicial q0. (Si hay transiciones épsilon desde q0, incluimos esos estados también).",
+                "Paso 2: Leemos el primer símbolo 'a' de la cadena.",
+                "Paso 3: Para CADA estado activo actualmente, vemos a dónde lleva el símbolo 'a'. Reunimos todos esos nuevos estados en un nuevo conjunto.",
+                "Paso 4: Repetimos hasta terminar la cadena."
+            ]
+        },
+        {
+            "type": "important",
+            "value": "Regla de Oro: La cadena es aceptada si el conjunto final de estados contiene al menos un estado que pertenezca a F."
+        },
+        {
+            "type": "important",
+            "value": "Actividad Sugerida #5: Usa el simulador de la plataforma (menú superior) para probar la cadena '0101' en el autómata predeterminado. Observa cómo cambia el conjunto de estados activos en cada paso."
         }
     ]
 }
