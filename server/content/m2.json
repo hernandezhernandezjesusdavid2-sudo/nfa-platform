@@ -1,0 +1,24 @@
+{
+    "id": 2,
+    "title": "Definiciones Formales",
+    "content": [
+        {
+            "type": "text",
+            "value": "Un Autómata Finito No Determinista (AFND) se define formalmente como una 5-tupla (Q, Σ, δ, q0, F)."
+        },
+        {
+            "type": "list",
+            "items": [
+                "Q: Un conjunto finito de estados.",
+                "Σ: Un alfabeto finito de símbolos de entrada.",
+                "δ: La función de transición, δ: Q × Σ → P(Q).",
+                "q0: El estado inicial, q0 ∈ Q.",
+                "F: Un conjunto de estados finales o de aceptación, F ⊆ Q."
+            ]
+        },
+        {
+            "type": "important",
+            "value": "Nota: En un AFND, la función de transición devuelve un conjunto de estados, no un solo estado."
+        }
+    ]
+}

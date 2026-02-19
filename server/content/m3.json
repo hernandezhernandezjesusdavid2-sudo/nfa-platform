@@ -1,0 +1,18 @@
+{
+    "id": 3,
+    "title": "El Alfabeto y Lenguajes",
+    "content": [
+        {
+            "type": "text",
+            "value": "El alfabeto (Σ) es el conjunto de símbolos que el autómata puede leer. Un lenguaje sobre un alfabeto es un conjunto de cadenas formadas por símbolos de Σ."
+        },
+        {
+            "type": "text",
+            "value": "Un autómata 'reconoce' un lenguaje si acepta exactamente todas las cadenas que pertenecen a ese lenguaje."
+        },
+        {
+            "type": "example",
+            "value": "Si Σ = {a, b}, un lenguaje podría ser 'todas las cadenas que terminan en a'."
+        }
+    ]
+}

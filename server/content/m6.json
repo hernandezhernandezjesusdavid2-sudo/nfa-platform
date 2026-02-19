@@ -1,0 +1,18 @@
+{
+    "id": 6,
+    "title": "Construcción por Subconjuntos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Todo AFND tiene un AFD equivalente que reconoce el mismo lenguaje. El proceso para encontrarlo se llama 'Construcción por Subconjuntos' (Subset Construction)."
+        },
+        {
+            "type": "text",
+            "value": "Los estados del nuevo AFD corresponden a subconjuntos del conjunto de estados del AFND original (el conjunto potencia)."
+        },
+        {
+            "type": "important",
+            "value": "Efecto: Si el AFND tiene 'n' estados, el AFD podría tener hasta 2^n estados."
+        }
+    ]
+}

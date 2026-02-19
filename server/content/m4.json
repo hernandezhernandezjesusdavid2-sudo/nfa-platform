@@ -1,0 +1,18 @@
+{
+    "id": 4,
+    "title": "No Determinismo",
+    "content": [
+        {
+            "type": "text",
+            "value": "El 'no determinismo' significa que para un estado y un símbolo de entrada dado, el autómata puede transitar a varios estados simultáneamente, o incluso realizar una transición sin leer ningún símbolo (transición-ε)."
+        },
+        {
+            "type": "text",
+            "value": "Esto permite que el autómata esté en 'varios estados a la vez' conceptualmente."
+        },
+        {
+            "type": "important",
+            "value": "Diferencia Clave: En un AFD hay exactamente una transición por símbolo. En un AFND puede haber cero, una o más."
+        }
+    ]
+}

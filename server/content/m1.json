@@ -1,0 +1,18 @@
+{
+    "id": 1,
+    "title": "Introducción a los Autómatas",
+    "content": [
+        {
+            "type": "text",
+            "value": "Un autómata es un modelo matemático de un sistema con entradas y salidas, que puede estar en uno de un número finito de estados."
+        },
+        {
+            "type": "text",
+            "value": "La teoría de autómatas estudia estos modelos y su capacidad para reconocer lenguajes. Es la base de los compiladores y procesadores de texto."
+        },
+        {
+            "type": "important",
+            "value": "Concepto Clave: Un autómata procesa una cadena de entrada y decide si 'acepta' o 'rechaza' dicha cadena."
+        }
+    ]
+}

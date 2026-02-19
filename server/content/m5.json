@@ -1,0 +1,18 @@
+{
+    "id": 5,
+    "title": "Simulación de AFND",
+    "content": [
+        {
+            "type": "text",
+            "value": "Para simular un AFND, mantenemos el conjunto de todos los estados en los que el autómata podría estar."
+        },
+        {
+            "type": "text",
+            "value": "Al leer un símbolo, calculamos el nuevo conjunto de estados aplicando la función δ a cada estado actual y uniendo los resultados."
+        },
+        {
+            "type": "text",
+            "value": "Una cadena es aceptada si al final del proceso, al menos uno de los estados activos es un estado de aceptación (F)."
+        }
+    ]
+}
